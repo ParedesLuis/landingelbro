@@ -1,0 +1,283 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #5a1a3d 0%, #7a2d52 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.decoration {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  top: -20%;
+  right: -10%;
+  pointer-events: none;
+}
+
+.decoration::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 0, 110, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  bottom: -15%;
+  left: -5%;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  max-width: 900px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brandName {
+  font-size: 7rem;
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: -3px;
+  margin: 0;
+  line-height: 1;
+  color: white;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #ff006e;
+  margin: 0;
+  font-style: italic;
+}
+
+.heroInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mainMessage {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: white;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Benefits Row */
+.benefits {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
+/* Coming Soon Section */
+.comingSoon {
+  background: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.comingSoon h2 {
+  color: #5a1a3d;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.comingSoon p {
+  color: #666666;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .heroContent {
+    gap: 2.5rem;
+  }
+
+  .brandName {
+    font-size: 5rem;
+  }
+
+  .mainMessage {
+    font-size: 2.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .benefits {
+    gap: 1.5rem;
+  }
+
+  .benefit {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 90vh;
+    padding: 2rem 1.5rem;
+  }
+
+  .heroContent {
+    gap: 2rem;
+  }
+
+  .brandName {
+    font-size: 3.5rem;
+    letter-spacing: -2px;
+  }
+
+  .tagline {
+    font-size: 1.3rem;
+  }
+
+  .mainMessage {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.05rem;
+  }
+
+  .benefits {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefit {
+    padding: 0.75rem 1rem;
+    width: 100%;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+
+  .comingSoon {
+    padding: 3rem 1.5rem;
+  }
+
+  .comingSoon h2 {
+    font-size: 2rem;
+  }
+
+  .comingSoon p {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 100vh;
+    padding: 1.5rem 1rem;
+    justify-content: space-around;
+  }
+
+  .heroContent {
+    gap: 1.5rem;
+  }
+
+  .brandName {
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .mainMessage {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .benefits {
+    gap: 0.75rem;
+  }
+
+  .benefit {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .icon {
+    font-size: 1.2rem;
+  }
+
+  .comingSoon {
+    padding: 2rem 1rem;
+  }
+
+  .comingSoon h2 {
+    font-size: 1.5rem;
+  }
+
+  .comingSoon p {
+    font-size: 0.95rem;
+  }
+}
